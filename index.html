@@ -1,63 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Системная информация -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="shortcut icon" href="images/favicon.png">
     <style>
-        .ap {
-            font-weight: 900;
+        * {
+            box-sizing: border-box;
         }
-        #fp {
-            color: blueviolet;
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: #d4d4d4;
+        }
+        article {
+            width: 1000px;
+            margin: 40px auto;
+            padding: 20px 150px 60px;
+            background-color: #f0f0f0;
+            box-shadow: 0 0 16px rgba(0, 0, 0, 0.7);
+        }
+        #main {
+            border-left: 2px solid #ddd;
+            border-right: 2px solid #ddd;
+        }
+        h1, h2, h3 {
+            font-family: 'Century Gothic', monospace;
+        }
+        #logo {
+            float: left;
+        }
+        #slogan {
+            float: right;
+            font-style: italic;
+            font-weight: normal;
+            font-size: .7rem;
+            text-align: right;
+            color: #909090;
+            width: 30%;
+        }
+        .clearfix::before, .clearfix::after,
+        .block::before, .block::after {
+            content: "";
+            display: table;
+        }
+        .clearfix::after, .block::after {
+             clear: both;
+        }
+        .alignleft {
+            float: left;
+            margin-right: 15px;
+        }
+
+        .alignright {
+            float: right;
+            margin-left: 15px;
+        }
+        .block {
+            padding: 30px;
+        }
+        .block:nth-child(odd){
+            background-color: #f8f8f8;
+            border-bottom: 2px solid #ddd;
+            border-top: 2px solid #ddd;
+        }
+        .block img {
+            border-radius: 50%;
+        }
+        .block:first-child, .block:last-child {
+            text-align: center;
+        }
+        header {
+            padding: 30px 15px;
         }
     </style>
 </head>
 
 <body>
-
-    <!-- Основной контент -->
-    <h1>Заголовок 1</h1>
-    <h2>Заголовок 2</h2>
-    /////
-    <h6>Заголовок 6</h6>
-    <p tabindex="1">Lorem ipsum dolor <b><i>sit amet consectetur</i></b> adipisicing elit.
-        Aliquam aut reprehenderit natus animi <i>ad sequi eveniet</i> quia ipsam culpa,
-        laborum soluta neque officia itaque nesciunt <u>quos repudiandae eum obcaecati!</u> Molestiae.
-    </p>
-    <p tabindex="2" id="fp">Lorem ipsum dolor sit amet <s><u>consectetur adipisicing elit.</u></s>
-        Animi ducimus esse laborum natus excepturi illo saepe officiis commodi tempore ad,
-        consequatur quas quidem molestiae ratione itaque corporis cum? Doloribus, porro.
-    </p>
-    <p title="Lorem ipsum" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, culpa?</p>
-    <p class="ap">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo laudantium quia, non quaerat fuga temporibus.</p>
-    <p class="ap">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-        Id facilis sint vero odit ad laboriosam magni quibusdam pariatur assumenda similique omnis,
-        doloribus at quod nemo alias culpa beatae, obcaecati eveniet nam,
-        natus asperiores sunt ducimus unde perferendis! Optio illo,
-        amet possimus illum consectetur velit magni obcaecati animi vel suscipit, veniam omnis, aspernatur blanditiis.
-        Dignissimos nulla illo est ipsa mollitia id vel. Et incidunt quam perferendis facere tempore ea animi impedit
-        quis
-        accusantium, reiciendis eveniet obcaecati quos amet repudiandae velit quas nobis. Aut quidem, fugiat,
-        iste quaerat voluptatum perspiciatis pariatur odit inventore ex hic officia? At, repudiandae. Nemo nesciunt eum
-        libero.
-    </p>
-    <hr>
-    <input type="checkbox" checked>
-    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ab ut porro in a quae illum aliquam, repellat
-        consequuntur. Laudantium dignissimos dolores id a quam nesciunt veritatis? Natus, exercitationem voluptatibus.
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime necessitatibus aliquam hic sint blanditiis
-        architecto libero, aspernatur veniam recusandae. Nam amet ipsum itaque dolore culpa illum corporis molestias
-        facilis unde?
-    </div>
-    <div>
-        Lorem ipsum <span style="color: green;">dolor sit amet<br> consectetur adipisicing elit.</span> Odit ab ut porro in a quae illum aliquam, repellat
-        consequuntur. Laudantium dignissimos dolores id a quam nesciunt veritatis? Natus, exercitationem voluptatibus.
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime necessitatibus aliquam hic sint blanditiis
-        architecto libero, aspernatur veniam recusandae. Nam amet ipsum itaque dolore culpa illum corporis molestias
-        facilis unde?
-    </div>
+    <article>
+        <header class="clearfix">
+            <div id="logo">
+                <img src="images/logo-inky-black.png" alt="Logo">
+            </div>
+            <div id="slogan">
+                <h1>
+                    Daily Deals for Creative Professionals
+                </h1>
+            </div>
+        </header>
+        <div id="main">
+            <div class="block">
+                <h2>Here is what InkyDeals is all about</h2>
+                <p>We've made a lot of friends along...</p>
+            </div>
+            <div class="block">
+                <img src="images/rating.jpg" alt="Stars" class="alignleft">
+                <h3>Average user rating:</h3>
+                <p>The average user rating for our deals was <strong>4.5 out of 5 stars</strong></p>
+            </div>
+            <div class="block">
+                <img src="images/savings.jpg" alt="Stars" class="alignright">
+                <h3>Totaly saved by members:</h3>
+                <p>InkyDeals members have saved <strong>$28.320.804</strong> in 2018 alone.</p>
+            </div>
+        </div>
+    </article>
 </body>
 
 </html>
